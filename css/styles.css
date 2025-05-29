@@ -90,16 +90,29 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #2e2f42;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);  
 }
 
 .nav-link.current {
     position: relative;
 }
 
+.nav-link.current::after {
+    content: '';
+    position: absolute;
+    border-radius: 2px;
+    height: 4px;
+    width: 100%;
+    left: 0;
+    bottom: -1px;
+    background-color: #404bbf;
+}
+
 .nav-link:hover,
 .nav-link:focus,
 .contacts-link:hover,
-.contacts-link:focus {
+.contacts-link:focus,
+.nav-link.current {
    color: #404bbf;
 }
 
@@ -123,11 +136,19 @@ img {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: #434455;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
   
 /*___________________ hero */
 .hero-image {
     background-color: #2E2F42;
+    background-image: linear-gradient(
+        rgba(46, 47, 66, 0.7), 
+        rgba(46, 47, 66, 0.7)
+        ),
+        url(../images/hero-image.jpg);
+    max-width: 1440рх;
+    margin: 0 auto;
     padding: 188px 0 188px;
 }
 
@@ -190,6 +211,20 @@ img {
     width: calc((100% - 72px) / 4);
 }
 
+.solutions-icon-container {
+    padding: 24px 100px;
+    align-items: center;
+    justify-content: center;
+    background-color: #f4f4fd;
+    border-radius: 4px;
+    border: 1px solid #8e8f99;
+    margin-bottom:8px;
+}
+
+.solutions-icon{
+    
+}
+
 .section-title {
     font-weight: 500;
     font-size: 20px;
@@ -241,6 +276,30 @@ img {
     text-align: center;
 }
 
+.team-contact-item {
+    display: flex;   
+    gap: 24px;
+    align-items: center;
+    margin-top: 8px;
+}
+
+.team-contact-link {
+    display: flex;  
+    justify-content: center;
+    align-items: center; 
+    width: 40px;
+    height: 40px;
+    background-color:  #4d5ae5;
+    border-radius: 50%;
+}
+.team-contact-link:hover {
+    background-color: #404BBF
+}
+
+.contact-icon {
+    fill: #f4f4fd;
+}
+
 /*___________________ portfolio */
 .portfolio-list {
     display: flex;
@@ -273,6 +332,10 @@ img {
     padding: 100px 0 100px;
 }
 
+.footer-container {
+    display: flex;
+    gap: 120px;
+}
  
 .footer-logo {
     display: inline-block;
@@ -288,4 +351,13 @@ img {
     letter-spacing: 0.02em;
     color: #F4F4FD;
     max-width: 264px;
+}
+
+.footer-media-text {
+    margin-bottom: 16px;
+    color: #fff;  
+}
+
+.footer-contact-link:hover {
+    background-color: #31D0AA;
 }
