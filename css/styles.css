@@ -299,8 +299,8 @@ img {
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .team-contact-link:hover,
-.team-contact-link:active {
-    background-color: #404BBF;
+.team-contact-link:focus {
+    background-color:  #404bbf;
 }
 
 .contact-icon {
@@ -413,6 +413,6 @@ img {
 }
 
 .footer-contact-link:hover,
-.footer-contact-link:active {
+.footer-contact-link:focus {
     background-color: #31D0AA;
 }
